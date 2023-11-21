@@ -43,3 +43,6 @@ auditallow untrusted_app_27 self:netlink_route_socket nlmsg_getneigh;
 
 # Allow hidden build props
 get_prop({ untrusted_app_27 userdebug_or_eng(`-untrusted_app_27') }, userdebug_or_eng_prop)
+
+# Camera
+dontaudit untrusted_app_27 camera2_exported_camera_prop:file read;
